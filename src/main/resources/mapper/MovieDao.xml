@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zlf.WX.dao.MovieDao">
+	<select id="queryMovie" resultType="com.zlf.WX.entity.Movie">
+		SELECT id, name,
+		actor, year, poster, previous
+		FROM movie
+		ORDER BY id
+		DESC
+	</select>	
+	<select id="queryMovieById" resultType="com.zlf.WX.entity.Movie">
+		SELECT id, name,
+		actor, year, poster, previous
+		FROM movie
+		WHERE
+		id=#{id}
+	</select>
+	<insert id="insertMovie" useGeneratedKeys="true" keyProperty="id"
+		keyColumn="id" parameterType="com.zlf.WX.entity.Movie">
+		INSERT INTO
+		movie(name,actor,year,poster,previous)
+		VALUES
+		(#{name},#{actor},
+		#{year},#{poster},#{previous})
+	</insert>
+	<update id="updateMovie" parameterType="com.zlf.WX.entity.Movie">
+		update movie
+		<set>
+			<if test="name != null">name=#{name},</if>
+			<if test="actor != null">actor=#{actor},</if>
+			<if test="year != null">year=#{year}</if>
+			<if test="poster != null">poster=#{poster}</if>
+			<if test="previous != null">previous=#{previous}</if>
+		</set>
+		where id=#{id}
+	</update>
+	<delete id="deleteMovie">
+		DELETE FROM
+		movie
+		WHERE
+		id =
+		#{id}
+	</delete>
+</mapper>
+    
