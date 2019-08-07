@@ -4,8 +4,9 @@
 这个项目是在imooc网的一个教程（https://www.imooc.com/learn/945）的基础上写的
 算是第一次完成了前后端的交互，记录一下。
 
-列一些在过程中帮助到自己的网站，以防再掉坑
-########################################
+列一些在过程中帮助到自己的网站，以防再掉坑<br>
+
+########################################<br>
 1.标题：Spring boot 出现 "org.springframework.beans.factory.UnsatisfiedDependencyException" 错误
   网址：https://blog.csdn.net/csdn_tingou/article/details/84872046
 
