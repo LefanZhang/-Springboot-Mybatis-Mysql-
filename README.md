@@ -26,5 +26,8 @@
   P.S.这个问题在第二次搭建又遇到了，明明直接Ctrl+C上一个的pom文件，文件中也引入了文中的jar包，但是还没用，困扰了很久。可能是这个jar包就是得手动引入？下一个网页是引入jar包的方法。
   
 6.标题：Eclipse中导入外部jar包——添加lib<br>
-  网址：https://blog.csdn.net/weixin_40997360/article/details/79644858
+  网址：https://blog.csdn.net/weixin_40997360/article/details/79644858<br>
 ########################################
+
+数据库6个属性：id、name、actor、year、poster、preview<br>
+id设置为自增
